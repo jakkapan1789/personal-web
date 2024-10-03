@@ -49,8 +49,8 @@ const Hero = () => {
           variant="h5"
           sx={{ marginBottom: 8, animation: "fadeInUp 1s ease-in-out" }}
         >
-          Hi, I'm Jakkapan, a freelance developer dedicated to bringing your
-          ideas to life.
+          {`Hi, I'm Jakkapan, a freelance developer dedicated to bringing your
+          ideas to life.`}
         </Typography>
         <Typography
           data-aos="fade-up"

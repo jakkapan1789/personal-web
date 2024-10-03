@@ -50,20 +50,20 @@ const About = () => {
               paragraph
               sx={{ color: "gray.700", mb: 4 }}
             >
-              Hello! I'm Jakkapan Pakeerat, a passionate and creative web
+              {`Hello! I'm Jakkapan Pakeerat, a passionate and creative web
               developer With 6 years of experience in the field, I've had the
               pleasure of working on a diverse range of projects that have honed
-              my skills and fueled my enthusiasm for web development.
+              my skills and fueled my enthusiasm for web development.`}
             </Typography>
             <Typography
               variant="body1"
               paragraph
               sx={{ color: "gray.700", mb: 4 }}
             >
-              My journey in technology started from a young age until I grew up
+              {`My journey in technology started from a young age until I grew up
               and decided to study technology. Today, I am skilled in creating
               responsive and user-friendly websites that work smoothly across
-              all devices.
+              all devices.`}
             </Typography>
             <Typography
               variant="h5"

@@ -71,7 +71,7 @@ const Projects = () => {
           component="h2"
           align="center"
           gutterBottom
-          sx={{ fontWeight: "bold", mb: 6 }}
+          sx={{ fontWeight: "bold", mb: 6, mt: { xs: 0, sm: 3 } }}
         >
           My Projects
         </Typography>
