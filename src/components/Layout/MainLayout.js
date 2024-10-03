@@ -1,0 +1,205 @@
+import React, { useState } from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  IconButton,
+  Drawer,
+  List,
+  ListItem,
+  ListItemText,
+  Box,
+  Container,
+} from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import GitHubIcon from "@mui/icons-material/GitHub";
+
+const MainLayout = ({ children }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const router = useRouter(); // Initialize the useRouter hook
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleNavigation = (href) => {
+    router.push(href); // Navigate to the desired section
+    toggleMenu(); // Close the menu after navigating
+  };
+
+  const menuItems = [
+    { text: "Home", href: "/" },
+    { text: "About", href: "/#about" },
+    { text: "Projects", href: "/#projects" },
+    { text: "Certificates", href: "/#certificates" },
+    // { text: "Contact", href: "/#contact" },
+  ];
+
+  return (
+    <Box sx={{ minHeight: "100vh", backgroundColor: "#f7fafc" }}>
+      <AppBar
+        position="fixed"
+        color="inherit"
+        elevation={1}
+        sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
+      >
+        <Toolbar>
+          <Typography
+            variant="h6"
+            to="/"
+            sx={{
+              flexGrow: 1,
+              textDecoration: "none",
+              color: "#0046AD",
+              fontWeight: "bold",
+            }}
+          >
+            JP.DevZone
+          </Typography>
+          {/* <Box sx={{ display: { xs: "none", md: "flex" }, gap: 3 }}>
+            {menuItems.map((item) => (
+              <Typography
+                key={item.text}
+                // component={Link}
+                to={item.href}
+                sx={{
+                  color: "#4b5563",
+                  textDecoration: "none",
+                  "&:hover": { color: "#3b82f6" },
+                  transition: "color 0.3s",
+                }}
+              >
+                {item.text}
+              </Typography>
+            ))}
+          </Box> */}
+          <Box sx={{ display: { xs: "none", md: "flex" }, gap: 3 }}>
+            {menuItems.map((item) => (
+              <Typography
+                key={item.text}
+                onClick={() => handleNavigation(item.href)}
+                sx={{
+                  color: "#4b5563",
+                  textDecoration: "none", // No underline
+                  "&:hover": { color: "#3b82f6" },
+                  transition: "color 0.3s",
+                  cursor: "pointer", // Add cursor pointer for hover effect
+                }}
+              >
+                {item.text}
+              </Typography>
+            ))}
+          </Box>
+          <IconButton
+            edge="end"
+            color="inherit"
+            sx={{ display: { md: "none" } }}
+            onClick={toggleMenu}
+          >
+            <MenuIcon />
+          </IconButton>
+        </Toolbar>
+      </AppBar>
+
+      {/* <Drawer
+        anchor="left"
+        open={isMenuOpen}
+        onClose={toggleMenu}
+        sx={{ display: { md: "none" } }}
+      >
+        <List sx={{ width: 250 }}>
+          {menuItems.map((item) => (
+            <ListItem
+              button
+              to={item.href}
+              key={item.text}
+              onClick={toggleMenu}
+            >
+              <ListItemText primary={item.text} />
+            </ListItem>
+          ))}
+        </List>
+      </Drawer> */}
+      {/* <Drawer
+        anchor="left"
+        open={isMenuOpen}
+        onClose={toggleMenu}
+        sx={{ display: { md: "none" }, zIndex: 9999 }}
+      >
+        <List sx={{ width: 250 }}>
+          {menuItems.map((item) => (
+            <Link
+              sx={{ textDecoration: "none" }}
+              key={item.text}
+              href={item.href}
+              passHref
+            >
+              <ListItem button onClick={toggleMenu}>
+                <ListItemText primary={item.text} />
+              </ListItem>
+            </Link>
+          ))}
+        </List>
+      </Drawer> */}
+      <Drawer
+        anchor="left"
+        open={isMenuOpen}
+        onClose={toggleMenu}
+        sx={{ display: { md: "none" }, zIndex: 9999 }}
+      >
+        <List sx={{ width: 250 }}>
+          {menuItems.map((item) => (
+            <ListItem
+              button
+              key={item.text}
+              onClick={() => handleNavigation(item.href)}
+            >
+              <ListItemText
+                primary={
+                  <Typography
+                    sx={{
+                      color: "#4b5563",
+                      textDecoration: "none", // Ensure no underline here
+                    }}
+                  >
+                    {item.text}
+                  </Typography>
+                }
+              />
+            </ListItem>
+          ))}
+        </List>
+      </Drawer>
+
+      <Box component="main">{children}</Box>
+
+      <Box
+        component="footer"
+        sx={{ backgroundColor: "#1f2937", color: "white", py: 4 }}
+      >
+        <Container maxWidth="lg" sx={{ textAlign: "center" }}>
+          <Typography variant="body2" sx={{ mb: 2 }}>
+            © 2024 JP.DevZone. All rights reserved.
+          </Typography>
+          <Box sx={{ display: "flex", justifyContent: "center", gap: 2 }}>
+            <IconButton color="inherit" href="#">
+              <FacebookIcon />
+            </IconButton>
+            <IconButton color="inherit" href="#">
+              <TwitterIcon />
+            </IconButton>
+            <IconButton color="inherit" href="#">
+              <GitHubIcon />
+            </IconButton>
+          </Box>
+        </Container>
+      </Box>
+    </Box>
+  );
+};
+
+export default MainLayout;
