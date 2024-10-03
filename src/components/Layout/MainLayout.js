@@ -20,15 +20,17 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 
 const MainLayout = ({ children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const router = useRouter(); // Initialize the useRouter hook
+  const router = useRouter();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const handleNavigation = (href) => {
-    router.push(href); // Navigate to the desired section
-    toggleMenu(); // Close the menu after navigating
+  const handleNavigation = (href, mobile) => {
+    router.push(href);
+    if (mobile) {
+      toggleMenu();
+    }
   };
 
   const menuItems = [
@@ -36,7 +38,6 @@ const MainLayout = ({ children }) => {
     { text: "About", href: "/#about" },
     { text: "Projects", href: "/#projects" },
     { text: "Certificates", href: "/#certificates" },
-    // { text: "Contact", href: "/#contact" },
   ];
 
   return (
@@ -60,23 +61,7 @@ const MainLayout = ({ children }) => {
           >
             JP.DevZone
           </Typography>
-          {/* <Box sx={{ display: { xs: "none", md: "flex" }, gap: 3 }}>
-            {menuItems.map((item) => (
-              <Typography
-                key={item.text}
-                // component={Link}
-                to={item.href}
-                sx={{
-                  color: "#4b5563",
-                  textDecoration: "none",
-                  "&:hover": { color: "#3b82f6" },
-                  transition: "color 0.3s",
-                }}
-              >
-                {item.text}
-              </Typography>
-            ))}
-          </Box> */}
+
           <Box sx={{ display: { xs: "none", md: "flex" }, gap: 3 }}>
             {menuItems.map((item) => (
               <Typography
@@ -105,46 +90,6 @@ const MainLayout = ({ children }) => {
         </Toolbar>
       </AppBar>
 
-      {/* <Drawer
-        anchor="left"
-        open={isMenuOpen}
-        onClose={toggleMenu}
-        sx={{ display: { md: "none" } }}
-      >
-        <List sx={{ width: 250 }}>
-          {menuItems.map((item) => (
-            <ListItem
-              button
-              to={item.href}
-              key={item.text}
-              onClick={toggleMenu}
-            >
-              <ListItemText primary={item.text} />
-            </ListItem>
-          ))}
-        </List>
-      </Drawer> */}
-      {/* <Drawer
-        anchor="left"
-        open={isMenuOpen}
-        onClose={toggleMenu}
-        sx={{ display: { md: "none" }, zIndex: 9999 }}
-      >
-        <List sx={{ width: 250 }}>
-          {menuItems.map((item) => (
-            <Link
-              sx={{ textDecoration: "none" }}
-              key={item.text}
-              href={item.href}
-              passHref
-            >
-              <ListItem button onClick={toggleMenu}>
-                <ListItemText primary={item.text} />
-              </ListItem>
-            </Link>
-          ))}
-        </List>
-      </Drawer> */}
       <Drawer
         anchor="left"
         open={isMenuOpen}
@@ -156,7 +101,7 @@ const MainLayout = ({ children }) => {
             <ListItem
               button
               key={item.text}
-              onClick={() => handleNavigation(item.href)}
+              onClick={() => handleNavigation(item.href, true)}
             >
               <ListItemText
                 primary={

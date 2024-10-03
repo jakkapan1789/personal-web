@@ -35,13 +35,13 @@ const About = () => {
           spacing={4}
           justifyContent="center"
           alignItems="center"
-          sx={{ backgroundColor: "white", p: 4, borderRadius: 5 }}
+          sx={{ backgroundColor: "white", p: 4, borderRadius: 8 }}
         >
           <Grid item xs={12} md={4} sx={{ textAlign: "center" }}>
             <Avatar
               src="https://avatars.githubusercontent.com/u/109788212?v=4"
               alt="Profile Picture"
-              sx={{ width: 200, height: 200, mx: "auto", boxShadow: 2 }}
+              sx={{ width: 300, height: 300, mx: "auto", boxShadow: 2 }}
             />
           </Grid>
           <Grid item xs={12} md={8}>
@@ -80,7 +80,6 @@ const About = () => {
                 "Back-end Development",
                 "Node.js, Express & .NET",
                 "Database Management",
-                "UI/UX Design",
               ].map((skill, index) => (
                 <ListItem key={index} disableGutters>
                   <ListItemIcon>

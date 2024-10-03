@@ -19,17 +19,9 @@ const projects = [
     technologies: ["React", "Next.js", "PostgreSQL", "C#"],
     link: "#",
     image: "https://via.placeholder.com/300x200?text=E-commerce+Platform",
-    delay: "300",
+    delay: "0",
   },
-  {
-    title: "Task Management App",
-    description:
-      "A responsive web application for managing tasks and projects with real-time updates.",
-    technologies: ["Vue.js", "Firebase", "Vuex"],
-    link: "#",
-    image: "https://via.placeholder.com/300x200?text=Task+Management+App",
-    delay: "600",
-  },
+
   {
     title: "SCG Communication Platform",
     description:
@@ -37,7 +29,7 @@ const projects = [
     technologies: ["HTML5", "CSS3", "JavaScript", "GSAP"],
     link: "#",
     image: "https://via.placeholder.com/300x200?text=Portfolio+Website",
-    delay: "900",
+    delay: "300",
   },
   {
     title: "Bill Of Operation MFG",
@@ -46,7 +38,7 @@ const projects = [
     technologies: ["Angular.js", ".NET", "JavaScript", "C#"],
     link: "#",
     image: "https://via.placeholder.com/300x200?text=Portfolio+Website",
-    delay: "900",
+    delay: "600",
   },
   {
     title: `'applove' Frontend Package`,
@@ -55,7 +47,7 @@ const projects = [
     technologies: ["TypeScript"],
     link: "#",
     image: "https://via.placeholder.com/300x200?text=Portfolio+Website",
-    delay: "900",
+    delay: "0",
   },
 ];
 
