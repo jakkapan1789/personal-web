@@ -19,7 +19,7 @@ const About = () => {
         <Typography
           data-aos="fade-up"
           data-aos-duration="1200"
-          data-aos-delay="900"
+          data-aos-delay="300"
           variant="h3"
           component="h2"
           align="center"
@@ -30,7 +30,7 @@ const About = () => {
         <Grid
           data-aos="fade-up"
           data-aos-duration="1200"
-          data-aos-delay="1200"
+          data-aos-delay="300"
           container
           spacing={4}
           justifyContent="center"
@@ -41,7 +41,7 @@ const About = () => {
             <Avatar
               src="https://avatars.githubusercontent.com/u/109788212?v=4"
               alt="Profile Picture"
-              sx={{ width: 300, height: 300, mx: "auto", boxShadow: 2 }}
+              sx={{ width: 250, height: 250, mx: "auto", boxShadow: 2 }}
             />
           </Grid>
           <Grid item xs={12} md={8}>
@@ -50,7 +50,7 @@ const About = () => {
               paragraph
               sx={{ color: "gray.700", mb: 4 }}
             >
-              {`Hello! I'm Jakkapan Pakeerat, a passionate and creative web
+              {`Hello! I'm Jakkapan, a passionate and creative web
               developer With 6 years of experience in the field, I've had the
               pleasure of working on a diverse range of projects that have honed
               my skills and fueled my enthusiasm for web development.`}
