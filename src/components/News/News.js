@@ -72,7 +72,7 @@ const News = () => {
             >
               <InputBase
                 fullWidth
-                sx={{ ml: 1, flex: 1 }}
+                sx={{ ml: 1, flex: 1, fontSize: 16 }}
                 placeholder="ค้นหาข่าวสาร"
                 inputProps={{ "aria-label": "search google maps" }}
               />
