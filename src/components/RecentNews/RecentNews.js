@@ -126,7 +126,8 @@ const projects = [
 
 const RecentNews = () => {
   return (
-    <Box id="projects" sx={{ py: 4, backgroundColor: "#f5f5f5" }}>
+    // <Box id="projects" sx={{ py: 4, backgroundColor: "#f5f5f5" }}>
+    <Box id="projects" sx={{ py: 4 }}>
       <Container maxWidth="lg">
         <Grid container spacing={2}>
           <Grid item xs={12} sm={12}>
@@ -198,9 +199,9 @@ const RecentNews = () => {
 
                 <CardContent sx={{ display: "flex", flexDirection: "column" }}>
                   <Typography
-                    variant="h6"
-                    component="div"
-                    sx={{ fontWeight: "bold", ml: -1 }}
+                    variant="caption"
+                    // component="div"
+                    sx={{ ml: -1 }}
                   >
                     {project.title}
                   </Typography>
@@ -213,7 +214,7 @@ const RecentNews = () => {
                       left: 8,
                     }}
                   >
-                    <Typography variant="body2" color="textSecondary">
+                    <Typography variant="caption" color="textSecondary">
                       6 Oct, 2024 22:13
                     </Typography>
                   </Stack>

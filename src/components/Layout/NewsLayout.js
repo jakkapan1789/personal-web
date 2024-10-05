@@ -63,7 +63,7 @@ const NewsLayout = ({ children }) => {
                 fontWeight: "bold",
               }}
             >
-              Today News
+              BNN News
             </Typography>
 
             <Box sx={{ display: { xs: "none", md: "flex" }, gap: 3 }}>

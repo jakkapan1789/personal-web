@@ -58,13 +58,13 @@ const News = () => {
         <Grid container spacing={1}>
           <Grid item xs={12} md={6}>
             <Card
-              data-aos="fade-up"
-              data-aos-duration="1200"
+              // data-aos="fade-up"
+              // data-aos-duration="1200"
               sx={{
                 height: "100%",
                 borderRadius: 0,
-                transition: "transform 0.3s",
-                "&:hover": { transform: "scale(1.1)" },
+                // transition: "transform 0.3s",
+                // "&:hover": { transform: "scale(1.1)" },
                 cursor: "pointer",
                 position: "relative",
                 overflow: "hidden",
@@ -78,13 +78,13 @@ const News = () => {
                 sx={{
                   position: "relative",
                   overflow: "hidden",
-                  height: "500px",
+                  height: { xs: "300px", sm: "500px" },
                 }}
               >
                 <CardMedia
                   component="img"
                   image={
-                    "https://static.thairath.co.th/media/dFQROr7oWzulq5Fa6rBj3L8rUxeZUZibbJtkPk8XEZYRxGHRqftySc9lWYlrm786JN2.webp"
+                    "https://static.thairath.co.th/media/dFQROr7oWzulq5Fa6rBj2wU8UO7e4n3MnFmPbrxRH4rG8rZEvR4pzR4HOEN94P8sFDl.webp"
                   }
                   alt={"project.title"}
                   sx={{
@@ -115,8 +115,8 @@ const News = () => {
                     WebkitBoxOrient: "vertical",
                   }}
                 >
-                  ศปช. จ่อชง ครม. ปรับเงินช่วยเหลือน้ำท่วมเป็นอัตราเดียว 9,000
-                  บาทต่อครัวเรือน
+                  “อิ๊งค์” เตรียมนำไทย ผงาดเวทีอาเซียน สปป.ลาว-ปลื้ม Time
+                  ยกให้เป็นผู้ทรงอิทธิพลแห่งอนาคต
                 </Typography>
 
                 <Typography
@@ -131,10 +131,21 @@ const News = () => {
                     ml: -1,
                   }}
                 >
-                  โฆษกกระทรวงมหาดไทยเผย ศปช.
-                  เห็นชอบตามที่มหาดไทยเสนอเพิ่มเงินช่วยเหลือผู้ประสบภัยน้ำท่วมเป็นอัตราเดียว
-                  9,000 บาทต่อครัวเรือน เตรียมชง ครม.
-                  โอนเงินช่วยเหลือให้เพิ่มสำหรับครัวเรือนที่เคยได้ 5,000 บาท
+                  “จิรายุ” เผย นายกฯ ปลื้ม Time จัดให้เป็น 1
+                  ในผู้นำทรงอิทธิพลแห่งอนาคต สร้างประวัติศาสตร์เป็นนายกฯ
+                  หญิงที่อายุน้อยที่สุดในเอเชีย
+                  อังคารนี้ขอนำชื่อประเทศไทยผงาดบนเวทีสุดยอดผู้นำอาเซียนที่
+                  สปป.ลาว วันที่ 5 ต.ค. 2567 นายจิรายุ ห่วงทรัพย์
+                  ที่ปรึกษาของนายกรัฐมนตรี เปิดเผยว่า
+                  การประชุมสุดยอดผู้นำอาเซียนที่จะจัดขึ้นที่นครเวียงจันทน์ในสัปดาห์นี้
+                  คึกคักเป็นพิเศษหลังจากสื่อมวลชนต่างประเทศให้ความสนใจน.ส.แพทองธาร
+                  ชินวัตร นายกรัฐมนตรีของไทย ซึ่งได้รับการจัดอันดับจากนิตยสาร
+                  TIME ให้เป็นหนึ่งในผู้ทรงอิทธิพลแห่งอนาคต (Time 100 Next)
+                  ประจำปีนี้ โดยการจัดอันดับครั้งนี้แบ่งออกเป็น 5 ประเภท ได้แก่
+                  ผู้นำ (Leaders), ศิลปิน (Artists), ผู้สร้างปรากฏการณ์
+                  (Phenoms), ผู้สร้างนวัตกรรม (Innovators) และผู้ให้การสนับสนุน
+                  (Advocates) ซึ่งนายกรัฐมนตรีไทยติดอันดับในหมวด “ผู้นำ”
+                  โดยน.ส.แพทองธารถือเป็นนายกรัฐมนตรีหญิงที่อายุน้อยที่สุดในเอเชีย
                 </Typography>
 
                 <Stack
@@ -158,12 +169,12 @@ const News = () => {
               {projects.map((project, index) => (
                 <Grid
                   item
-                  xs={6}
+                  xs={12}
                   sm={6}
                   key={index}
-                  data-aos="fade-up"
-                  data-aos-duration="1200"
-                  data-aos-delay="200"
+                  // data-aos="fade-up"
+                  // data-aos-duration="1200"
+                  // data-aos-delay="200"
                 >
                   <Card
                     sx={{

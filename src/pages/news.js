@@ -32,7 +32,7 @@ export default function Home() {
       <NewsLayout>
         <News />
         <SlideNews />
-        <NewsCategoryList />
+        {/* <NewsCategoryList /> */}
         <FaceNews />
         <RecentNews />
         {/* <Slidetest /> */}
