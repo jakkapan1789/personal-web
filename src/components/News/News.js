@@ -9,7 +9,12 @@ import {
   CardContent,
   Stack,
   Chip,
+  Divider,
+  Paper,
+  InputBase,
+  IconButton,
 } from "@mui/material";
+import SearchIcon from "@mui/icons-material/Search";
 
 const projects = [
   {
@@ -56,15 +61,32 @@ const News = () => {
     <Box id="projects" sx={{ py: 4, mt: 6, backgroundColor: "#f5f5f5" }}>
       <Container maxWidth="lg">
         <Grid container spacing={1}>
+          <Grid item xs={12} md={12}>
+            <Paper
+              component="form"
+              sx={{
+                p: "2px 4px",
+                display: "flex",
+                alignItems: "center",
+              }}
+            >
+              <InputBase
+                fullWidth
+                sx={{ ml: 1, flex: 1 }}
+                placeholder="ค้นหาข่าวสาร"
+                inputProps={{ "aria-label": "search google maps" }}
+              />
+              <IconButton type="button" sx={{ p: "10px" }} aria-label="search">
+                <SearchIcon />
+              </IconButton>
+            </Paper>
+          </Grid>
           <Grid item xs={12} md={6}>
             <Card
-              // data-aos="fade-up"
-              // data-aos-duration="1200"
               sx={{
                 height: "100%",
                 borderRadius: 0,
-                // transition: "transform 0.3s",
-                // "&:hover": { transform: "scale(1.1)" },
+
                 cursor: "pointer",
                 position: "relative",
                 overflow: "hidden",

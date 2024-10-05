@@ -200,7 +200,7 @@ const FaceNews = () => {
                     sx={{ display: "flex", justifyContent: "space-between" }}
                   >
                     <Typography
-                      sx={{ fontWeight: "bold" }}
+                      // sx={{ fontWeight: "bold" }}
                       variant="h6"
                       component="div"
                     >
@@ -208,7 +208,7 @@ const FaceNews = () => {
                     </Typography>
 
                     <Typography
-                      sx={{ fontWeight: "bold", cursor: "pointer" }}
+                      sx={{ cursor: "pointer" }}
                       variant="body1"
                       component="div"
                     >
@@ -363,7 +363,7 @@ const FaceNews = () => {
                     sx={{ display: "flex", justifyContent: "space-between" }}
                   >
                     <Typography
-                      sx={{ fontWeight: "bold" }}
+                      // sx={{ fontWeight: "bold" }}
                       variant="h6"
                       component="div"
                     >
@@ -371,7 +371,7 @@ const FaceNews = () => {
                     </Typography>
 
                     <Typography
-                      sx={{ fontWeight: "bold", cursor: "pointer" }}
+                      sx={{ cursor: "pointer" }}
                       variant="body1"
                       component="div"
                     >

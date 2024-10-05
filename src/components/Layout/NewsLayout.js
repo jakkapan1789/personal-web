@@ -12,12 +12,14 @@ import {
   ListItemText,
   Box,
   Container,
+  Stack,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import GitHubIcon from "@mui/icons-material/GitHub";
-
+import AutoAwesomeMosaicIcon from "@mui/icons-material/AutoAwesomeMosaic";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 const NewsLayout = ({ children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const router = useRouter();
@@ -35,9 +37,9 @@ const NewsLayout = ({ children }) => {
 
   const menuItems = [
     { text: "หน้าหลัก", href: "/" },
-    { text: "เกี่ยวกับเรา", href: "/#about" },
-    { text: "เข้าสู่ระบบ", href: "/#projects" },
-    // { text: "Certificates", href: "/#certificates" },
+    { text: "ข่าว", href: "/#about" },
+    { text: "ติดต่อเรา", href: "/#about" },
+    { text: "เกี่ยวกับเรา", href: "/#projects" },
   ];
 
   return (
@@ -53,44 +55,55 @@ const NewsLayout = ({ children }) => {
             maxWidth="lg"
             sx={{ display: "flex", justifyContent: "space-between" }}
           >
-            <Typography
-              variant="h6"
-              to="/"
-              sx={{
-                flexGrow: 1,
-                textDecoration: "none",
-                color: "#0046AD",
-                fontWeight: "bold",
-              }}
-            >
-              BNN News
-            </Typography>
-
-            <Box sx={{ display: { xs: "none", md: "flex" }, gap: 3 }}>
-              {menuItems.map((item) => (
-                <Typography
-                  key={item.text}
-                  onClick={() => handleNavigation(item.href)}
-                  sx={{
-                    color: "#4b5563",
-                    textDecoration: "none",
-                    "&:hover": { color: "#3b82f6" },
-                    transition: "color 0.3s",
-                    cursor: "pointer",
-                  }}
-                >
-                  {item.text}
-                </Typography>
-              ))}
-            </Box>
             <IconButton
               edge="end"
               color="inherit"
-              sx={{ display: { md: "none" } }}
+              sx={{ display: { md: "none" }, ml: -3 }}
               onClick={toggleMenu}
             >
               <MenuIcon />
             </IconButton>
+            <Stack
+              direction="row"
+              alignItems={"center"}
+              sx={{ cursor: "pointer" }}
+            >
+              <AutoAwesomeMosaicIcon sx={{ color: "#0046AD" }} />
+              <Typography
+                variant="h6"
+                to="/"
+                sx={{
+                  flexGrow: 1,
+                  textDecoration: "none",
+                  color: "#0046AD",
+                  fontWeight: "bold",
+                }}
+              >
+                BNN News
+              </Typography>
+              <Box sx={{ display: { xs: "none", md: "flex" }, gap: 3, ml: 2 }}>
+                {menuItems.map((item) => (
+                  <Typography
+                    key={item.text}
+                    onClick={() => handleNavigation(item.href)}
+                    sx={{
+                      color: "#4b5563",
+                      textDecoration: "none",
+                      "&:hover": { color: "#0046AD" },
+                      transition: "color 0.3s",
+                      cursor: "pointer",
+                    }}
+                  >
+                    {item.text}
+                  </Typography>
+                ))}
+              </Box>
+            </Stack>
+            <Box>
+              <IconButton sx={{ color: "#0046AD", mr: { xs: -3, md: 0 } }}>
+                <AccountCircleIcon />
+              </IconButton>
+            </Box>
           </Container>
         </Toolbar>
       </AppBar>
