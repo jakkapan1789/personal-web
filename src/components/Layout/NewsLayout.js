@@ -79,7 +79,7 @@ const NewsLayout = ({ children }) => {
                   fontWeight: "bold",
                 }}
               >
-                App demo news
+                App Demo News
               </Typography>
               <Box sx={{ display: { xs: "none", md: "flex" }, gap: 3, ml: 2 }}>
                 {menuItems.map((item) => (
