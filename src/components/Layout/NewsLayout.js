@@ -85,7 +85,7 @@ const NewsLayout = ({ children }) => {
                 {menuItems.map((item) => (
                   <Typography
                     key={item.text}
-                    onClick={() => handleNavigation(item.href)}
+                    // onClick={() => handleNavigation(item.href)}
                     sx={{
                       color: "#4b5563",
                       textDecoration: "none",
@@ -119,7 +119,7 @@ const NewsLayout = ({ children }) => {
             <ListItem
               button
               key={item.text}
-              onClick={() => handleNavigation(item.href, true)}
+              // onClick={() => handleNavigation(item.href, true)}
             >
               <ListItemText
                 primary={
