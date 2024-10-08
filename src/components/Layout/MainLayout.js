@@ -36,7 +36,7 @@ const MainLayout = ({ children }) => {
   const menuItems = [
     { text: "Home", href: "/" },
     { text: "About", href: "/#about" },
-    { text: "Projects", href: "/#projects" },
+    // { text: "Projects", href: "/#projects" },
     { text: "Certificates", href: "/#certificates" },
   ];
 
@@ -59,7 +59,7 @@ const MainLayout = ({ children }) => {
               fontWeight: "bold",
             }}
           >
-            JP.DevZone
+            Ball.DevZone
           </Typography>
 
           <Box sx={{ display: { xs: "none", md: "flex" }, gap: 3 }}>

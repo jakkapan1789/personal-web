@@ -12,6 +12,7 @@ import {
 } from "@mui/material";
 import CheckIcon from "@mui/icons-material/Check";
 
+import ballPic from "../../../public/assets/images/ball.jpeg";
 const About = () => {
   return (
     <Box id="about" sx={{ py: 8, backgroundColor: "gray.100" }}>
@@ -39,7 +40,8 @@ const About = () => {
         >
           <Grid item xs={12} md={4} sx={{ textAlign: "center" }}>
             <Avatar
-              src="https://avatars.githubusercontent.com/u/109788212?v=4"
+              // src="https://avatars.githubusercontent.com/u/109788212?v=4"
+              src={"https://avatars.githubusercontent.com/u/161267880?v=4"}
               alt="Profile Picture"
               sx={{ width: 250, height: 250, mx: "auto", boxShadow: 2 }}
             />
@@ -50,36 +52,29 @@ const About = () => {
               paragraph
               sx={{ color: "gray.700", mb: 4 }}
             >
-              {`Hello! I'm Jakkapan, a passionate and creative web
-              developer With 6 years of experience in the field, I've had the
-              pleasure of working on a diverse range of projects that have honed
-              my skills and fueled my enthusiasm for web development.`}
+              {`With over a 10 year of experience in software development, I bring a strong technical background, coupled with a for continuous learning. Skilled in coding, project management, and maintaining software applications, I excel in creating documentation, including flow diagrams, and devising project plans encompassing Proof of Concept (POC), User Acceptance Testing (UAT), and Production (PRD) phases. My expertise extends to crafting comprehensive test cases to ensure software quality for team efficiency.`}
             </Typography>
             <Typography
               variant="body1"
               paragraph
-              sx={{ color: "gray.700", mb: 4 }}
+              sx={{ color: "gray.700", mb: 2 }}
             >
-              {`My journey in technology started from a young age until I grew up
-              and decided to study technology. Today, I am skilled in creating
-              responsive and user-friendly websites that work smoothly across
-              all devices.`}
+              {` am adept at budget planning and control, ensuring projects stay within financial parameters while meeting objectives. I collaborate effectively with teams in South Asia to oversee software maintenance tasks. With a knack for solving complex problems with precision and clarity, I am committed to driving successful outcomes in every project.`}
             </Typography>
             <Typography
               variant="h5"
               component="h3"
-              sx={{ fontWeight: "bold", mb: 4 }}
+              sx={{ fontWeight: "bold", mb: 2 }}
             >
               My Expertise
             </Typography>
             <List>
               {[
-                "Front-end Development",
-                "Responsive Web Design",
-                "React.js, Vue.js & Angular.js",
-                "Back-end Development",
-                "Node.js, Express & .NET",
-                "Database Management",
+                "FullStack Developer",
+                "Advance Data Analyst",
+                "Project coordination",
+                "Manufacturing System",
+                "Project planing / Management",
               ].map((skill, index) => (
                 <ListItem key={index} disableGutters>
                   <ListItemIcon>

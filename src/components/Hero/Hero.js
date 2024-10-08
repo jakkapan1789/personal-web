@@ -40,7 +40,7 @@ const Hero = () => {
             animation: "fadeInDown 1s ease-in-out",
           }}
         >
-          JP.DevZone
+          Ball.DevZone
         </Typography>
         <Typography
           data-aos="fade-up"
@@ -49,8 +49,7 @@ const Hero = () => {
           variant="h5"
           sx={{ marginBottom: 8, animation: "fadeInUp 1s ease-in-out" }}
         >
-          {`Hi, I'm Jakkapan, a freelance developer dedicated to bringing your
-          ideas to life.`}
+          {`Hi, I’m Nopporn. Welcome to my website! With 10+ years in software development, I’m ready to build something great with you!`}
         </Typography>
         <Typography
           data-aos="fade-up"
