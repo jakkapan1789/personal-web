@@ -87,6 +87,32 @@ const About = () => {
                 </ListItem>
               ))}
             </List>
+                  <Typography
+              variant="h5"
+              component="h3"
+              sx={{ fontWeight: "bold", mb: 2 }}
+            >
+              My Skills
+            </Typography>
+            <List>
+              {[
+                "FullStack Developer",
+                "Advance Data Analyst",
+                "Project coordination",
+                "Manufacturing System",
+                "Project planing / Management",
+              ].map((skill, index) => (
+                <ListItem key={index} disableGutters>
+                  <ListItemIcon>
+                    <CheckIcon color="success" />
+                  </ListItemIcon>
+                  <ListItemText
+                    primary={skill}
+                    primaryTypographyProps={{ color: "gray.700" }}
+                  />
+                </ListItem>
+              ))}
+            </List>
           </Grid>
         </Grid>
       </Container>
