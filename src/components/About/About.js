@@ -96,7 +96,7 @@ const About = () => {
             </Typography>
             <List>
               {[
-                "MVC React Javascript HTML CSS MUI Bootstrap",
+                "ASP.NET CORE (MVC), React, Javascript, HTML, PHP, CSS, MUI, Bootstrap",
               ].map((skill, index) => (
                 <ListItem key={index} disableGutters>
                   <ListItemIcon>
