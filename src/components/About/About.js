@@ -92,15 +92,78 @@ const About = () => {
               component="h3"
               sx={{ fontWeight: "bold", mb: 2 }}
             >
-              My Skills
+              My Skills Frontend Tectnologies & Languages
             </Typography>
             <List>
               {[
-                "FullStack Developer",
-                "Advance Data Analyst",
-                "Project coordination",
-                "Manufacturing System",
-                "Project planing / Management",
+                "MVC React Javascript HTML CSS MUI Bootstrap",
+              ].map((skill, index) => (
+                <ListItem key={index} disableGutters>
+                  <ListItemIcon>
+                    <CheckIcon color="success" />
+                  </ListItemIcon>
+                  <ListItemText
+                    primary={skill}
+                    primaryTypographyProps={{ color: "gray.700" }}
+                  />
+                </ListItem>
+              ))}
+            </List>
+
+                    <Typography
+              variant="h5"
+              component="h3"
+              sx={{ fontWeight: "bold", mb: 2 }}
+            >
+              My Skills Banktend Tectnologies & Languages
+            </Typography>
+            <List>
+              {[
+                "C#, Websocket, RESTful API, Javascript ASP.NET ASP.NET CORE",
+              ].map((skill, index) => (
+                <ListItem key={index} disableGutters>
+                  <ListItemIcon>
+                    <CheckIcon color="success" />
+                  </ListItemIcon>
+                  <ListItemText
+                    primary={skill}
+                    primaryTypographyProps={{ color: "gray.700" }}
+                  />
+                </ListItem>
+              ))}
+            </List>
+                     <Typography
+              variant="h5"
+              component="h3"
+              sx={{ fontWeight: "bold", mb: 2 }}
+            >
+              My Skills Database Tectnologies
+            </Typography>
+            <List>
+              {[
+                "DB2, Oracle, SQL, PostgreSQL, MySQL, SQLlite",
+              ].map((skill, index) => (
+                <ListItem key={index} disableGutters>
+                  <ListItemIcon>
+                    <CheckIcon color="success" />
+                  </ListItemIcon>
+                  <ListItemText
+                    primary={skill}
+                    primaryTypographyProps={{ color: "gray.700" }}
+                  />
+                </ListItem>
+              ))}
+            </List>
+                  <Typography
+              variant="h5"
+              component="h3"
+              sx={{ fontWeight: "bold", mb: 2 }}
+            >
+             Other
+            </Typography>
+            <List>
+              {[
+                "AS/400 Power BI Handy Terminal Server (AD, DNS, File Share, IIS)",
               ].map((skill, index) => (
                 <ListItem key={index} disableGutters>
                   <ListItemIcon>
